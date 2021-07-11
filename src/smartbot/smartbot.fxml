@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1700.0" style="-fx-background-color: #2e5bb9;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartbot.Controller">
+    <stylesheets>
+        <URL value="@../../../SmartPortfolio/src/smartportfolio/smartbot.css" />
+    </stylesheets>
+    <children>
+        <ImageView fx:id="imageviewId" fitHeight="470.0" fitWidth="961.0" layoutX="248.0" layoutY="131.0" onDragDetected="#isImageviewId" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../Desktop/smartbott.gif" />
+            </image>
+        </ImageView>
+        <GridPane layoutX="496.0" layoutY="227.0" prefHeight="211.0" prefWidth="468.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label prefHeight="34.0" prefWidth="233.0" text="                       USERNAME :" textFill="#faf1f1">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="36.0" prefWidth="231.0" text="                       Password :" textFill="#d7d7d7" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="usernameId" onAction="#isUsernameId" promptText="enter username or email address" GridPane.columnIndex="1" />
+                <PasswordField fx:id="passwordId" onAction="#isPasswordId" promptText="enter your password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Hyperlink fx:id="forgotpassId" onAction="#isForgotpassId" prefHeight="46.0" prefWidth="234.0" text="Forgot password? Click here !" textFill="#f5f4f4" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            </children>
+        </GridPane>
+        <Label />
+        <Button fx:id="loginId" layoutX="964.0" layoutY="294.0" mnemonicParsing="false" onAction="#isLoginId" prefHeight="26.0" prefWidth="92.0" text="Login" textFill="#11aa35" />
+      <Button fx:id="createAccountId" layoutX="963.0" layoutY="347.0" mnemonicParsing="false" onAction="#isCreateAccountId" text="CreateAccount" />
+    </children>
+</AnchorPane>
